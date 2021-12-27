@@ -1,0 +1,21 @@
+image: alpine
+
+stages:
+    - test
+    - build
+    - deploy
+
+test:
+    stage: test
+    script: 
+        - echo "This is the test job."
+
+build:
+    stage: build
+    script: 
+        - echo "This is the build job."
+
+deploy:
+    stage: deploy
+    script: 
+        - echo "This is the deploy job."
