@@ -50,7 +50,7 @@ jobs:
           uses: actions/checkout@master
           with:
             repository: kprbarani99/e2e-testing-qa
-            run: echo "kprbarani99/e2e-testing-qa repo checkout successfully."
+            #run: echo "kprbarani99/e2e-testing-qa repo checkout successfully."
 
     #deploy:
         - name: deploy
