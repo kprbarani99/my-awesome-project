@@ -33,25 +33,25 @@ jobs:
       #  run: echo Hello, world!
 
     steps:
-        - name: test
+        - name: my-awesome-project - Test
           run: echo "This is the test job."
 
     #build:
         #runs-on: ubuntu-latest
 
-        - name: build
+        - name: my-awesome-project - Build
           run: echo "This is the build job."
           
     #bridge:
     #stage: bridge
     #trigger: my-awesome-group-trigger/e2e-testing-qa
     
-        - name: bridge
+        - name: my-awesome-project - Bridge
           uses: actions/checkout@master
           with:
             repository: kprbarani99/e2e-testing-qa
             #run: echo "kprbarani99/e2e-testing-qa repo checkout successfully."
 
     #deploy:
-        - name: deploy
+        - name: my-awesome-project - Deploy
           run: echo "This is the deploy job."
