@@ -49,7 +49,8 @@ jobs:
         - name: bridge
           uses: actions/checkout@master
           with:
-            repo: kprbarani99/e2e-testing-qa
+            repository: kprbarani99/e2e-testing-qa
+            run: echo "kprbarani99/e2e-testing-qa repo checkout successfully."
 
     #deploy:
         - name: deploy
