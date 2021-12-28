@@ -41,6 +41,14 @@ jobs:
 
         - name: build
           run: echo "This is the build job."
+          
+    #bridge:
+    #stage: bridge
+    #trigger: my-awesome-group-trigger/e2e-testing-qa
+    
+        - name: bridge
+          with:
+            repo: kprbarani99/e2e-testing-qa
 
     #deploy:
         - name: deploy
