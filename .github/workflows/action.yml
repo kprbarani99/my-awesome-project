@@ -47,6 +47,7 @@ jobs:
     #trigger: my-awesome-group-trigger/e2e-testing-qa
     
         - name: bridge
+          uses: actions/checkout@master
           with:
             repo: kprbarani99/e2e-testing-qa
 
