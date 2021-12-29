@@ -44,7 +44,7 @@ jobs:
             curl -X POST "https://api.github.com/repos/kprbarani99/e2e-testing-qa/actions/workflows/e2e-testing-qa_action.yml/dispatches" \
               -H "Accept: application/vnd.github.v3+json" \
               -H "Content-Type: application/json" \
-              -H "Authorization: Bearer ${secrets.GITHUB_TOKEN}" \
+              -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}" \
               --data "{\"ref\":\"${ref}\",\"inputs\":${inputs}}"
 
         - name: my-awesome-project - Deploy
