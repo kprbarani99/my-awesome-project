@@ -37,8 +37,15 @@ jobs:
           
         - name: Trigger my e2e-testing-qa
           run: |
-            curl -XPOST -u "${{ secrets.GITHUB_TOKEN }}" -H "Accept:application/vnd.github" -H "Content-Type:application/json" https://api.github.com/repos/kprbarani99/e2e-testing-qa/e2e-testing-qa_action.yml/dispatches --data '{"ref": "main"}'   
-            echo "Trigger my e2e-testing-qa is completed now."
+            #curl -XPOST -u "${{ secrets.GITHUB_TOKEN }}" -H "Accept:application/vnd.github" -H "Content-Type:application/json" https://api.github.com/repos/kprbarani99/e2e-testing-qa/e2e-testing-qa_action.yml/dispatches --data '{"ref": "main"}'   
+            #echo "Trigger my e2e-testing-qa is completed now."
+            echo "https://api.github.com/repos/kprbarani99/e2e-testing-qa/actions/workflows/e2e-testing-qa_action.yml/dispatches"
+
+            curl -X POST "https://api.github.com/repos/kprbarani99/e2e-testing-qa/actions/workflows/e2e-testing-qa_action.yml/dispatches" \
+              -H "Accept: application/vnd.github.v3+json" \
+              -H "Content-Type: application/json" \
+              -H "Authorization: Bearer ${secrets.GITHUB_TOKEN}" \
+              --data "{\"ref\":\"${ref}\",\"inputs\":${inputs}}"
 
         - name: my-awesome-project - Deploy
           run: echo "This is the deploy job."
