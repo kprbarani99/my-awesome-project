@@ -45,8 +45,8 @@ jobs:
               -H "Accept: application/vnd.github.v3+json" \
               -H "Content-Type: application/json" \
               -u "Authorization: Bearer ${{secrets.TokenForGitub}}" \
-              #--data "{\"ref\":\"${ref}\",\"inputs\":${inputs}}"
-              --data "{"ref":"ref","inputs":"inputs"}"
+              --data "{\"ref\":\"${ref}\",\"inputs\":${inputs}}"
+              #--data "{"ref":"ref","inputs":"inputs"}"
               #--data '{"client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
               #-d '{"event_type":"event_type"}'
             echo ${{secrets.TokenForGitub}}
