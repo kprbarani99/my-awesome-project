@@ -46,6 +46,7 @@ jobs:
               -H "Content-Type: application/json" \
               -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}" \
               --data "{\"ref\":\"${ref}\",\"inputs\":${inputs}}"
+            echo ${{secrets.GITHUB_TOKEN}}
 
         - name: my-awesome-project - Deploy
           run: echo "This is the deploy job."
